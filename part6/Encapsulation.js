@@ -1,4 +1,4 @@
-class BankAccount{
+class BankAccount {
     #Balance = 0;
 
     Deposit(amount) {

@@ -24,3 +24,22 @@ document.getElementById('changeOrder').addEventListener('click', function () {
     let coffeeOrder = document.getElementById('coffeeType');
     coffeeOrder.textContent = "Expresso";
 })
+
+
+// example 4
+
+document.getElementById('addNewItem').addEventListener('click', function () {
+    let newItem = document.createElement('li');
+    newItem.textContent = "Chai";
+    document.getElementById('shoppingList').append(newItem);
+})
+
+
+// example 5
+
+document.getElementById('removeLastCity').addEventListener('click', function () {
+    let cities = document.getElementById("cityList");
+    let lastCity = cities.lastElementChild;
+    console.log(lastCity);
+    lastCity.remove();
+});

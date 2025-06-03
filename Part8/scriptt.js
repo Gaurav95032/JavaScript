@@ -13,7 +13,10 @@ document.getElementById('highlightFirstCity').addEventListener('click', function
     let firstCity = cities.firstElementChild;
 
     if (firstCity) {
-        firstCity.classList.add('bg-yellow-300', 'text-black', 'px-3', 'py-2');
+        firstCity.classList.toggle('bg-yellow-300');
+        firstCity.classList.toggle('text-black');
+        firstCity.classList.toggle('px-3');
+        firstCity.classList.toggle('py-2');
     }
 });
 
@@ -43,3 +46,27 @@ document.getElementById('removeLastCity').addEventListener('click', function () 
     console.log(lastCity);
     lastCity.remove();
 });
+
+
+// example 6
+
+document.getElementById('clickMeButton').addEventListener('dblclick', function () {
+    alert("Dobby is a free elf...")
+})
+
+
+// example 7
+
+document.getElementById('teaList').addEventListener('click', function (event) {
+    if (event.target && event.target.matches('.teaItem')) {
+        event.target.classList.toggle('bg-yellow-300');  
+    }
+})
+
+// example 8
+
+document.getElementById('feedbackForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+    let theFeedback = document.getElementById('feedbackInput').value;
+    document.getElementById('feedbackDisplay').textContent = `your feedback ::: ${theFeedback}`
+})

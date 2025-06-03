@@ -11,6 +11,7 @@
 
 <body>
 
+    
     <h1 class="flex items-center justify-center bg-gray-500 p-10 text-white font-bold text-3xl mb-3">
         JavaScript DOM Practice
     </h1>
@@ -85,6 +86,37 @@
             class="text-white border-2 bg-gray-800 p-2 rounded-xl hover:bg-transparent hover:text-gray-900 hover:border-gray-800"
             id="removeLastCity">
             Remove last City </button>
+    </section>
+
+    <section id="example6" class="flex flex-col gap-4 items-center justify-center border-4 border-gray-800 p-5 mx-5 my-3">
+        <h2 class="text-grey-900 text-2xl font-bold text-decoration underline">Event Handling in DOM</h2>
+        <button
+            class="text-white border-2 bg-gray-800 p-2 rounded-xl hover:bg-transparent hover:text-gray-900 hover:border-gray-800"
+            id="clickMeButton">
+            Click me! </button>
+    </section>
+
+    <section id="example7" class="flex flex-col gap-4 items-center justify-center border-4 border-gray-800 p-5 mx-5 my-3">
+        <h2 class="text-grey-900 text-2xl font-bold text-decoration underline">Event Delegation in DOM</h2>
+        <ul id="teaList">
+            <li style="font-size:30px; color: rgb(49, 48, 48);" class="teaItem">Green Tea</li>
+            <li style="font-size:30px; color: rgb(49, 48, 48);" class="teaItem">Black Tea</li>
+            <li style="font-size:30px; color: rgb(49, 48, 48);" class="teaItem">Oolong Tea</li>
+        </ul>
+        <p class="text-3xl text-gray-900 bg-gray-300 px-4 py-2">Click on any tea to select it</p>
+    </section>
+
+
+    <section id="example8" class="flex flex-col gap-4 items-center justify-center border-4 border-gray-800 p-5 mx-5 my-3">
+        <h2 class="text-grey-900 text-2xl font-bold text-decoration underline">Form Handling</h2>
+        <form id="feedbackForm">
+            <label class="text-3xl text-gray-900" for="feedbackInput">Enter your feedback : </label>
+            <input class="text-grey-500 border-2 border-gray-800 w-96 h-10 p-2" type="text" id="feedbackInput" placeholder="Enter Your feedback">
+            <button type="submit"
+                class="text-white border-2 bg-gray-800 p-2 rounded-xl hover:bg-transparent hover:text-gray-900 hover:border-gray-800">
+                Click me! </button>
+        </form>
+        <p class="text-3xl text-gray-900 p-2" id="feedbackDisplay"></p>
     </section>
 
 

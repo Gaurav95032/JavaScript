@@ -1,0 +1,105 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f1de;
+    /* Retro beige background */
+    font-family: 'Courier New', Courier, monospace;
+    /* Typewriter retro font */
+    color: #3d405b;
+    /* Classic dark blue-gray */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* Heading */
+#heading {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px #81b29a;
+    /* Retro teal shadow */
+}
+
+/* Todo Container */
+#todo {
+    background-color: #fff;
+    border: 2px solid #e07a5f;
+    /* Retro reddish border */
+    border-radius: 10px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Form styling */
+#todoForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+label {
+    font-weight: bold;
+    color: #3d405b;
+}
+
+input#todoInput {
+    padding: 0.75rem;
+    border: 2px solid #81b29a;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #fdfcdc;
+    /* Pale yellow retro tone */
+}
+
+/* Buttons */
+button {
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#todoAddbutton {
+    background-color: #81b29a;
+    color: white;
+}
+
+#todoDeleteButton {
+    background-color: #e07a5f;
+    color: white;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+button:hover {
+    transform: scale(1.03);
+}
+
+/* Todo List */
+#todoList {
+    list-style-type: square;
+    padding-left: 1.2rem;
+}
+
+#todoList li {
+    background-color: #f4f1de;
+    border-left: 4px solid #3d405b;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: monospace;
+    word-break: break-word;
+}

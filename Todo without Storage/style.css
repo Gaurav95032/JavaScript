@@ -1,4 +1,6 @@
-/* Reset some default styles */
+/* Gothic Retro Anime Font & Reset */
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -6,100 +8,190 @@
 }
 
 body {
-    background-color: #f4f1de;
-    /* Retro beige background */
-    font-family: 'Courier New', Courier, monospace;
-    /* Typewriter retro font */
-    color: #3d405b;
-    /* Classic dark blue-gray */
+    background: linear-gradient(145deg, #1a1a1a, #0c0c0c);
+    font-family: 'IM Fell English SC', serif;
+    color: #f4e8dc;
+    min-height: 100vh;
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
+    justify-content: flex-start;
+    overflow-x: hidden;
 }
 
-/* Heading */
+/* Header at Top */
 #heading {
+    width: 100%;
+    text-align: center;
     font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    text-shadow: 2px 2px #81b29a;
-    /* Retro teal shadow */
+    color: #d9b77c;
+    padding: 20px 10px;
+    background: #161616;
+    border-bottom: 2px solid #4c1c1c;
+    box-shadow: 0 5px 15px rgba(120, 0, 0, 0.4);
+    text-shadow: 2px 2px 6px #6b0000;
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    animation: fadeInDown 1.3s ease-out;
 }
 
-/* Todo Container */
+@keyframes fadeInDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Container */
 #todo {
-    background-color: #fff;
-    border: 2px solid #e07a5f;
-    /* Retro reddish border */
-    border-radius: 10px;
-    padding: 2rem;
+    background: #2a1e1e;
+    border: 1px solid #3f2c2c;
+    border-radius: 12px;
+    padding: 30px 25px;
+    margin-top: 30px;
     width: 90%;
     max-width: 500px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 25px rgba(139, 0, 0, 0.4);
+    animation: riseUp 1.5s ease;
 }
 
-/* Form styling */
-#todoForm {
+/* Form */
+form#todoForm {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
+    gap: 12px;
+    margin-bottom: 20px;
 }
 
 label {
-    font-weight: bold;
-    color: #3d405b;
+    color: #d8bfae;
+    font-size: 1.1rem;
 }
 
 input#todoInput {
-    padding: 0.75rem;
-    border: 2px solid #81b29a;
+    padding: 10px 12px;
+    border: none;
     border-radius: 5px;
+    background-color: #413030;
+    color: #fff8e7;
     font-size: 1rem;
-    background-color: #fdfcdc;
-    /* Pale yellow retro tone */
+    transition: outline 0.3s ease;
+}
+
+input#todoInput:focus {
+    outline: 2px solid #d9b77c;
 }
 
 /* Buttons */
 button {
-    padding: 0.75rem;
+    padding: 10px 14px;
     font-size: 1rem;
-    font-weight: bold;
+    background: linear-gradient(135deg, #7a2c2c, #3a1a1a);
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: bold;
     cursor: pointer;
-    transition: transform 0.2s ease;
-}
-
-#todoAddbutton {
-    background-color: #81b29a;
-    color: white;
-}
-
-#todoDeleteButton {
-    background-color: #e07a5f;
-    color: white;
-    margin-top: 1rem;
-    width: 100%;
+    transition: background 0.4s ease, transform 0.2s ease;
+    box-shadow: 0 0 10px #4f1c1c;
 }
 
 button:hover {
-    transform: scale(1.03);
+    background: linear-gradient(135deg, #9c3f3f, #2a1111);
+    transform: scale(1.05);
 }
 
 /* Todo List */
-#todoList {
-    list-style-type: square;
-    padding-left: 1.2rem;
+ul#todoList {
+    list-style: none;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 250px;
+    overflow-y: auto;
+    padding-right: 5px;
 }
 
-#todoList li {
-    background-color: #f4f1de;
-    border-left: 4px solid #3d405b;
-    margin-bottom: 0.5rem;
-    padding: 0.5rem 0.75rem;
-    border-radius: 4px;
+ul#todoList li {
+    background: #382727;
+    padding: 12px;
+    border-left: 4px solid #ad3c3c;
+    border-radius: 6px;
     font-size: 1rem;
-    font-family: monospace;
-    word-break: break-word;
+    color: #f4e8dc;
+    box-shadow: 0 0 10px rgba(100, 10, 10, 0.3);
+    animation: fadeInItem 0.5s ease-in-out;
+}
+
+@keyframes fadeInItem {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Bottom Delete Button */
+#todoDeleteButton {
+    margin-top: 20px;
+    background: linear-gradient(135deg, #3f0d0d, #7f1f1f);
+}
+
+/* Gothic Animations */
+@keyframes riseUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scrollbar Style (Dark Gothic) */
+#todoList::-webkit-scrollbar {
+    width: 6px;
+}
+
+#todoList::-webkit-scrollbar-thumb {
+    background-color: #611a1a;
+    border-radius: 3px;
+}
+
+#todoList::-webkit-scrollbar-track {
+    background: #1c1c1c;
+}
+
+/* Responsive Layout */
+@media (max-width: 600px) {
+    #heading {
+        font-size: 2rem;
+        padding: 15px 8px;
+    }
+
+    #todo {
+        padding: 20px 15px;
+    }
+
+    button {
+        font-size: 0.95rem;
+    }
+
+    input#todoInput {
+        font-size: 0.95rem;
+    }
 }

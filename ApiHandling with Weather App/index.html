@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en"
+    class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 via-white to-blue-300 font-sans">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Weather App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fadeIn {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+
+        .glass-card {
+            position: relative;
+            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+        }
+
+        .glass-card::before {
+            content: "";
+            position: absolute;
+            top: -20%;
+            left: -20%;
+            width: 140%;
+            height: 140%;
+            background: linear-gradient(135deg,
+                    rgba(255, 255, 255, 0.25) 0%,
+                    rgba(255, 255, 255, 0.05) 100%);
+            transform: rotate(25deg);
+            pointer-events: none;
+            mix-blend-mode: screen;
+        }
+    </style>
+</head>
+
+<body class="p-4 sm:p-6 md:p-10">
+    <div id="weatherApp"
+        class="glass-card relative p-6 w-full max-w-md sm:max-w-lg md:max-w-xl animate-fadeIn space-y-6 text-gray-800">
+
+        <div class="space-y-2">
+            <label for="weatherInput" class="text-lg font-semibold text-gray-700 block">Enter City:</label>
+            <input type="text" id="weatherInput" placeholder="e.g., Mumbai"
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition bg-white/60 backdrop-blur-sm placeholder-gray-500" />
+        </div>
+
+        <button id="showWeatherButton"
+            class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-200 shadow-lg">
+            Show Weather
+        </button>
+
+        <div id="weatherData" class="mt-6 flex flex-col items-start space-y-2 text-gray-700">
+            <!-- Weather data will appear here -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
